@@ -7,8 +7,8 @@ class BaseStudent(db.Model):
     __abstract__ = True
 
     name: str = db.Column(db.String())
-    number: int = db.Column(db.Integer())
-    email: str = db.Column(db.String())
+    number: int = db.Column(db.Integer(), unique=True)
+    email: str = db.Column(db.String(), unique=True)
 
     @classmethod
     async def query_by_number(cls, number: int):
@@ -36,7 +36,7 @@ def generate_uuid():
 class UnsignedStudentModel(BaseStudent):
     __tablename__ = 'unsigned_student'
 
-    uuid: str = db.Column(db.String(), default=generate_uuid)
+    uuid: str = db.Column(db.String(), default=generate_uuid, unique=True)
 
     @classmethod
     async def query_by_uuid(cls, uuid: str):
