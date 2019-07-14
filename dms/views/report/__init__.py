@@ -1,6 +1,5 @@
 from sanic import Blueprint
 
-
 report_blueprint = Blueprint(
     name='report_blueprint',
     url_prefix='/report',

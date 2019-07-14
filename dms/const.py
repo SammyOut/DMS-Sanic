@@ -41,4 +41,3 @@ class STAY_STATUS(Enum):
     SAT_OUT = 1
     SAT_IN = 2
     STAY = 3
-

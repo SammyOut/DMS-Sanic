@@ -8,7 +8,6 @@ from views.meal import meal_blueprint
 from views.notice import notice_blueprint
 from views.report import report_blueprint
 
-
 blueprint_group = Blueprint.group(
     account_blueprint,
     apply_blueprint,

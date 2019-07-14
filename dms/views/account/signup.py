@@ -14,4 +14,3 @@ class SignupView(HTTPMethodView):
         Signup
         """
         pass
-

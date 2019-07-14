@@ -1,6 +1,5 @@
 from sanic.blueprints import Blueprint
 
-
 apply_blueprint = Blueprint(
     name='apply_blueprint',
     url_prefix='/apply',
